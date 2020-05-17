@@ -1,0 +1,116 @@
+body {
+    text-align: center;
+    background-image: url(Hintergrund.png);
+    font-family: sans-serif;
+}
+
+.kreis {
+        margin: auto;
+        margin-top: -350px;
+        position: static; 
+        text-align: center;
+        background-color: rgb(199, 46, 0);
+        width: 700px;
+        height: 700px;
+        border-radius: 400px    
+}
+
+.text{
+        font-size: 130px;
+        font-weight: bolder; 
+        color:white;
+        margin-left: 490px;
+        margin-top: -450px;
+        position: static; 
+        text-align: center;
+        width: 400px;
+        height: 400px;
+}
+
+.name{
+        font-size: 30px;
+        font-weight: lighter; 
+        color:white;
+        margin-left: 680px;
+        margin-top: -300px;
+        position: static; 
+        text-align: center;
+        width: 400px;
+        height: 400px;
+}
+
+
+.navigator li{
+        display: inline;
+        list-style: none; 
+}
+
+.navigator{
+        background-color: #c4c4c4;
+        padding: 10px;
+        position: fixed;
+        top: -8px;
+        margin-left: 900px; 
+        border-radius: 12px;
+}
+
+
+.navigator a{
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        font-size: 20px; 
+}
+
+.navigator a:hover{
+        color: rgb(199, 46, 0);
+      }
+
+
+.icon {
+        margin-top:-340px;
+        margin-left: 110px;
+        height: 130px;
+}
+
+.icon a:hover{
+        opacity: 0.5;
+}
+
+h2 {
+        font-weight: lighter;
+        color:  rgb(199, 46, 0);
+}
+
+.box{
+        margin: auto;
+        position: static; 
+        text-align: center;
+        width: 800px;
+        background-color: rgba(228, 228, 228, 0.7);
+        width:800px;
+        height: 100%;
+        border-radius: 50px;
+}
+
+.box2{
+        margin: auto;
+        position: static; 
+        text-align: center;
+        width: 800px;
+        background-color: rgba(228, 228, 228, 0.7);
+        height: 100%;
+        border-radius: 50px;
+}
+
+.box3{
+        margin: auto;
+        position: static; 
+        text-align: center;
+        width: 800px;
+        background-color: rgba(228, 228, 228, 0.7);
+        height: 100%;
+        border-radius: 50px;
+}
+        
+
