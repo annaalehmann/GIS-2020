@@ -82,18 +82,19 @@ h2 {
         color:  rgb(199, 46, 0);
 }
 
-.box{
+#box{
+        background-color: rgba(228, 228, 228, 0.7);
+        width: 800px;
+        padding: 0px 0px 0px 0px; 
         margin: auto;
+        border: 1px solid red;
         position: static; 
         text-align: center;
-        width: 800px;
-        background-color: rgba(228, 228, 228, 0.7);
-        width:800px;
         height: 100%;
         border-radius: 50px;
 }
 
-.box2{
+#box2{
         margin: auto;
         position: static; 
         text-align: center;
@@ -101,9 +102,10 @@ h2 {
         background-color: rgba(228, 228, 228, 0.7);
         height: 100%;
         border-radius: 50px;
+        border: 1px solid red;
 }
 
-.box3{
+#box3{
         margin: auto;
         position: static; 
         text-align: center;
@@ -111,6 +113,7 @@ h2 {
         background-color: rgba(228, 228, 228, 0.7);
         height: 100%;
         border-radius: 50px;
+        border: 1px solid red;
 }
 
 img{
