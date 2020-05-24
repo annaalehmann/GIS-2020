@@ -195,6 +195,7 @@ button {
         }
     
     .Leiste1 #box1 {
+        justify-content: center;
         position: relative;
         margin-top: 0px;
         margin-left: 0px; 
@@ -219,7 +220,7 @@ button {
     .navigatorrechts a{
         text-decoration: none;
         color: white;
-        font-size: 10px; 
+        font-size: 12px; 
         margin-left: 20px;
     }
     
@@ -228,13 +229,13 @@ button {
         display: inline;
         position: absolute;
         left: 20px;
-        top: 5px;
+        top: 10px;
     }
     
     .navigatorlinks p{
         text-decoration: none;
         color: white;
-        font-size: 10px; 
+        font-size: 12px; 
         margin-top: 0px;
     }
     
@@ -244,6 +245,7 @@ button {
     
     .Leiste1 + .Leiste>#box {
         position: relative;
+        justify-content: center;
         margin-top: 0px;
         margin-left: 0px; 
         margin-right: 0px;  
@@ -255,6 +257,7 @@ button {
     #logo{
         justify-content: center;
         position: absolute;
+        left: 0px;
         top: 0px;
         width: 350px;
     }
@@ -321,7 +324,7 @@ button {
     
     .container_ueberschrift div{
         background-color: rgba(187, 187, 187, 0.9);
-        width: 1085px;
+        width: 1050px;
         height: 100%;
         padding: 10px 10px 10px 10px; 
         text-align: center;
@@ -339,7 +342,7 @@ button {
     }
     
     .container img {
-        height: 150px ;
+        height: 130px ;
     }
     
     .container div{
@@ -369,6 +372,193 @@ button {
     }
 
     @media screen and (max-width:600px){
+        .Leiste{
+            display:flexbox;
+        }
+    
+    .Leiste1 #box1 {
+        justify-content: center;
+        position: relative;
+        margin-top: 0px;
+        margin-left: 0px; 
+        margin-right: 0px;  
+        background-color: rgba(255, 0, 119, 0.753);
+        height: 20px;
+        width: 100%;
+    }
+    
+    .Leiste1 .navigatorrechts{
+        display: inline;
+        list-style: none; 
+    }
+    
+    .navigatorrechts {
+        position: absolute;
+        right: 20px;
+        top: 0px;
+    
+    }
+    
+    .navigatorrechts a{
+        text-decoration: none;
+        color: white;
+        font-size: 10px; 
+        margin-left: 20px;
+    }
+    
+    
+    .navigatorlinks *{
+        display: inline;
+        position: absolute;
+        left: 20px;
+        top: 5px;
+    }
+    
+    .navigatorlinks p{
+        text-decoration: none;
+        color: white;
+        font-size: 10px; 
+        margin-top: 0px;
+    }
+    
+    .Leiste{
+        display:flexbox;
+    }
+    
+    .Leiste1 + .Leiste>#box {
+        position: relative;
+        justify-content: center;
+        margin-top: 0px;
+        margin-left: 0px; 
+        margin-right: 0px;  
+        background-color: rgba(19, 19, 19);
+        height: 100px;
+        width: 100%;
+    }
+    
+    #logo{
+        justify-content: center;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 250px;
+    }
+    
+    
+    img[alt=Warenkorb]{
+        position: absolute;
+        top: 80px; 
+        right: 90px; 
+        width:50px;
+    }
+    
+    #warenkorb:hover{
+        opacity: 0.5;
+    }
+    
+    #home{
+        position: absolute;
+        top: 85px; 
+        right:47px; 
+        width:55px;
+    }
+    
+    #home:hover{
+        opacity: 0.5;
+    }
+    
+    #menue img{
+        position: absolute;
+        top: 70px; 
+        right: 0px; 
+        width:70px;
+    }
+    
+    .inhalt{
+        display: none;
+        position: absolute;
+        right: 0px;
+        background-color: rgba(19, 19, 19);
+        width: 200px;
+    }
+    
+    .inhalt a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    
+      }
+    
+    #menue:hover .inhalt {
+          display: block;
+        }
+    
+    #menue:hover{
+            opacity: 0.7;
+        }
+    
+    .container_ueberschrift{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .container_ueberschrift div{
+        background-color: rgba(187, 187, 187, 0.9);
+        width: 500px;
+        height: 100%;
+        padding: 2px 2px 2px 2px; 
+        text-align: center;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        margin-left: 10px;
+        margin-top: 100px;
+    }
+    
+    
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .container img {
+        height: 100px ;
+    }
+    
+    .container div{
+        background-color: rgba(187, 187, 187, 0.9);
+        width: 200px;
+        height: 100%;
+        padding: 5px 5px 5px 5px; 
+        text-align: center;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        margin-left: 10px;
+    }
+    
+    .container p{
+        font-size:8.5px;
+    }
+
+    h3{
+        font-size: 15px;
+    }
+
+    h4{
+        font-size:13px;
+    }
+    
+    
+    button {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);;
+            border-radius: 5px;
+            border-color: rgb(0, 0, 0);
+            padding: 3px 3px 3px 3px;
+            font-size: 10px;
+        }
         
     }
 
