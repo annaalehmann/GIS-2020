@@ -175,6 +175,10 @@ img[alt=Warenkorb]{
     margin-left: 10px;
 }
 
+.container div:hover{
+    background-color: white;
+}
+
 .container p{
     font-size:12px;
 }
