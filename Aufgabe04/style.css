@@ -182,16 +182,68 @@ button {
 
 
     @media screen and (min-width: 600px){
-    
         .Leiste1 #box1 {
+            position: relative;
+            margin-top: 0px;
+            margin-left: 0px; 
+            margin-right: 0px;  
+            background-color: rgba(255, 0, 119, 0.753);
             height: 30px;
+            width: 100%;
+        }
+        
+        .Leiste1 .navigatorrechts{
+            display: inline;
+            list-style: none; 
+        }
+        
+        .navigatorrechts {
+            position: absolute;
+            right: 20px;
+            top: 5px;
+        
+        }
+        
+        .navigatorrechts a{
+            text-decoration: none;
+            color: white;
+            font-size: 15px; 
+            margin-left: 20px;
         }
         
         
-        .Leiste .logo{
-            position:relative;
-            margin-left: 200px;
-            width:150px;
+        .navigatorlinks *{
+            display: inline;
+            position: absolute;
+            left: 20px;
+            top: 5px;
+        }
+        
+        .navigatorlinks p{
+            text-decoration: none;
+            color: white;
+            font-size: 15px; 
+            margin-top: 0px;
+        }
+        
+        
+        .Leiste1 + .Leiste>#box {
+            position: relative;
+            margin-top: 0px;
+            margin-left: 0px; 
+            margin-right: 0px;  
+            background-color: rgba(19, 19, 19);
+            height: 110px;
+            width: 100%;
+        }
+        
+        #logo{
+            display:flexbox;
+            justify-content: center;
+            position: absolute;
+            top: 10px;
+            left: 300px;
+            width: 250px;
         }
         
         
@@ -208,7 +260,7 @@ button {
         
         #home{
             position: absolute;
-            top: 115px; 
+            top: 0px; 
             right: 70px; 
             width:80px;
         }
@@ -300,6 +352,7 @@ button {
                 border-color: rgb(0, 0, 0);
                 padding: 5px 5px 5px 5px;
             }
+    
 
     }
 
