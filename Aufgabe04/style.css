@@ -84,7 +84,7 @@ img[alt=Warenkorb]{
 
 #home{
     position: absolute;
-    top: 115px; 
+    top: 0px; 
     right: 70px; 
     width:80px;
 }
