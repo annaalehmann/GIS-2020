@@ -188,11 +188,10 @@ button {
         }
         
         
-        
         .Leiste >.logo{
             position:absolute;
+            text-align: center;
             left: 200px;
-            top: 0px;
             width:150px;
         }
         
