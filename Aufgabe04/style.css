@@ -63,11 +63,11 @@ body {
     width: 100%;
 }
 
-.Leiste >.logo{
-    position:absolute;
-    left: 600px;
+#logo{
+    position: absolute;
     top: 0px;
-    width:350px;
+    left: 600px;
+    width: 350px;
 }
 
 
@@ -188,10 +188,9 @@ button {
         }
         
         
-        .Leiste >.logo{
-            position:absolute;
-            text-align: center;
-            left: 200px;
+        .Leiste .logo{
+            position:relative;
+            margin-left: 200px;
             width:150px;
         }
         
