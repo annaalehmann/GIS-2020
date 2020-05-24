@@ -219,7 +219,7 @@ button {
     .navigatorrechts a{
         text-decoration: none;
         color: white;
-        font-size: 15px; 
+        font-size: 10px; 
         margin-left: 20px;
     }
     
@@ -234,7 +234,7 @@ button {
     .navigatorlinks p{
         text-decoration: none;
         color: white;
-        font-size: 15px; 
+        font-size: 10px; 
         margin-top: 0px;
     }
     
@@ -253,11 +253,10 @@ button {
     }
     
     #logo{
+        justify-content: center;
         position: absolute;
         top: 0px;
-        right: 250px;
         width: 350px;
-        justify-content: center;
     }
     
     
