@@ -10,10 +10,8 @@ body {
     padding:0px;
 }
 
-@media screen and (min-width: 1024px){
-
     .Leiste{
-        display:flexbox;
+        display:grid;
     }
 
 .Leiste1 #box1 {
@@ -35,7 +33,6 @@ body {
     position: absolute;
     right: 20px;
     top: 5px;
-
 }
 
 .navigatorrechts a{
@@ -61,7 +58,7 @@ body {
 }
 
 .Leiste{
-    display:flexbox;
+    display:grid;
 }
 
 .Leiste1 + .Leiste>#box {
@@ -77,7 +74,7 @@ body {
 #logo{
     position: absolute;
     top: 0px;
-    left: 600px;
+    left: 0px;
     width: 350px;
 }
 
@@ -136,15 +133,15 @@ img[alt=Warenkorb]{
     }
 
 .container_ueberschrift{
-    display: flex;
-    flex-direction: row;
+    display: grid;
     justify-content: center;
+    grid-gap: 30px 5px;
 }
 
 .container_ueberschrift div{
     background-color: rgba(187, 187, 187, 0.9);
     width: 1085px;
-    height: 100%;
+    height: 80px;
     padding: 10px 10px 10px 10px; 
     text-align: center;
     margin-bottom: 10px;
@@ -153,18 +150,62 @@ img[alt=Warenkorb]{
     margin-top: 100px;
 }
 
-
 .container{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-gap: 30px 5px;
     justify-content: center;
+
 }
 
 .container img {
     height: 200px ;
 }
 
-.container div{
+#Produkt1{
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+#Produkt2{
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+#Produkt3{
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+#Produkt4{
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-column-end: 4;
+    grid-row-end: 1;
+}
+
+#Produkt5{
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+#Produkt6{
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+#Produkt7{
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+#Produkt8{
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-column-end: 4;
+    grid-row-end: 1;
+}
+
+.container .Produkt{
     background-color: rgba(187, 187, 187, 0.9);
     width: 250px;
     height: 100%;
@@ -172,7 +213,6 @@ img[alt=Warenkorb]{
     text-align: center;
     margin-bottom: 10px;
     border-radius: 20px;
-    margin-left: 10px;
 }
 
 .container div:hover{
@@ -192,239 +232,115 @@ button {
         padding: 5px 5px 5px 5px;
     }
 
-}
+@media screen and (min-width: 600px) and (max-width: 1024px){
 
-
-
-    @media screen and (min-width: 600px){
-
-        .Leiste{
-            display:flexbox;
-        }
     
     .Leiste1 #box1 {
-        justify-content: center;
-        position: relative;
-        margin-top: 0px;
-        margin-left: 0px; 
-        margin-right: 0px;  
-        background-color: rgba(255, 0, 119, 0.753);
-        height: 30px;
-        width: 100%;
-    }
-    
-    .Leiste1 .navigatorrechts{
-        display: inline;
-        list-style: none; 
+        height: 25px;
     }
     
     .navigatorrechts {
-        position: absolute;
-        right: 20px;
-        top: 5px;
-    
+        top: 3px;
     }
     
     .navigatorrechts a{
-        text-decoration: none;
-        color: white;
         font-size: 12px; 
-        margin-left: 20px;
     }
     
     
     .navigatorlinks *{
-        display: inline;
-        position: absolute;
-        left: 20px;
-        top: 10px;
+        top: 5.5px;
     }
     
     .navigatorlinks p{
-        text-decoration: none;
-        color: white;
         font-size: 12px; 
-        margin-top: 0px;
     }
     
-    .Leiste{
-        display:flexbox;
-    }
-    
-    .Leiste1 + .Leiste>#box {
-        position: relative;
-        justify-content: center;
-        margin-top: 0px;
-        margin-left: 0px; 
-        margin-right: 0px;  
-        background-color: rgba(19, 19, 19);
-        height: 150px;
-        width: 100%;
+
+    .Leiste1 + .Leiste>#box { 
+        height: 100px;
     }
     
     #logo{
-        justify-content: center;
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        width: 350px;
+        top:5px;
+        width: 240px;
     }
     
     
     img[alt=Warenkorb]{
-        position: absolute;
-        top: 110px; 
-        right: 135px; 
-        width:70px;
-    }
-    
-    #warenkorb:hover{
-        opacity: 0.5;
+        top: 80px; 
+        right: 95px; 
+        width:52px;
     }
     
     #home{
-        position: absolute;
-        top: 115px; 
-        right: 70px; 
-        width:80px;
-    }
-    
-    #home:hover{
-        opacity: 0.5;
+        top: 83px; 
+        right: 50px; 
+        width:60px;
     }
     
     #menue img{
-        position: absolute;
-        top: 100px; 
-        right: 0px; 
-        width:95px;
+        top: 70px; 
+        width:75px;
     }
     
-    .inhalt{
-        display: none;
-        position: absolute;
-        right: 0px;
-        background-color: rgba(19, 19, 19);
-        width: 200px;
-    }
-    
-    .inhalt a {
-        color: white;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    
-      }
-    
-    #menue:hover .inhalt {
-          display: block;
-        }
-    
-    #menue:hover{
-            opacity: 0.7;
-        }
-    
-    .container_ueberschrift{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
     
     .container_ueberschrift div{
-        background-color: rgba(187, 187, 187, 0.9);
-        width: 1050px;
-        height: 100%;
-        padding: 10px 10px 10px 10px; 
-        text-align: center;
-        margin-bottom: 10px;
-        border-radius: 20px;
-        margin-left: 10px;
-        margin-top: 100px;
+        height: 70px;
+        width: 590px;
+        margin-top: 70px;
+        margin-right: 10px;
     }
-    
-    
-    .container{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+
+    h1{
+        font-size: 27px;
     }
     
     .container img {
-        height: 130px ;
+        height: 150px ;
+    }
+
+    
+    #Produkt4{
+        grid-column-start: 1;
+        grid-row-start: 2;
+        grid-column-end: 1;
+        grid-row-end: 2;
     }
     
-    .container div{
-        background-color: rgba(187, 187, 187, 0.9);
-        width: 250px;
-        height: 100%;
-        padding: 5px 5px 5px 5px; 
-        text-align: center;
-        margin-bottom: 10px;
-        border-radius: 20px;
-        margin-left: 10px;
+    #Produkt8{
+        grid-column-start: 1;
+        grid-row-start: 2;
+        grid-column-end: 1;
+        grid-row-end: 2;
+    }
+    
+    .container .Produkt{
+        width: 180px;
     }
     
     .container p{
         font-size:12px;
     }
-    
-    
-    button {
-            background-color: rgb(0, 0, 0);
-            color: rgb(255, 255, 255);;
-            border-radius: 5px;
-            border-color: rgb(0, 0, 0);
-            padding: 5px 5px 5px 5px;
-        }
-
-    }
+}
 
     @media screen and (max-width:600px){
-        .Leiste{
-            display:flexbox;
-        }
-    
+        
     .Leiste1 #box1 {
-        justify-content: center;
-        position: relative;
-        margin-top: 0px;
-        margin-left: 0px; 
-        margin-right: 0px;  
-        background-color: rgba(255, 0, 119, 0.753);
         height: 20px;
-        width: 100%;
     }
     
-    .Leiste1 .navigatorrechts{
-        display: inline;
-        list-style: none; 
-    }
-    
-    .navigatorrechts {
-        position: absolute;
-        right: 20px;
-        top: 0px;
-    
-    }
     
     .navigatorrechts a{
-        text-decoration: none;
-        color: white;
         font-size: 10px; 
-        margin-left: 20px;
+    }
+
+    .navigatorrechts {
+        top: 0px;
     }
     
-    
-    .navigatorlinks *{
-        display: inline;
-        position: absolute;
-        left: 20px;
-        top: 5px;
-    }
     
     .navigatorlinks p{
-        text-decoration: none;
-        color: white;
         font-size: 10px; 
         margin-top: 0px;
     }
@@ -434,35 +350,21 @@ button {
     }
     
     .Leiste1 + .Leiste>#box {
-        position: relative;
-        justify-content: center;
-        margin-top: 0px;
-        margin-left: 0px; 
-        margin-right: 0px;  
-        background-color: rgba(19, 19, 19);
         height: 70px;
-        width: 100%;
     }
     
     #logo{
-        justify-content: center;
-        position: absolute;
-        left: 0px;
         top: 10px;
         width: 150px;
     }
     
     
     img[alt=Warenkorb]{
-        position: absolute;
         top: 60px; 
         right: 75px; 
         width:40px;
     }
     
-    #warenkorb:hover{
-        opacity: 0.5;
-    }
     
     #home{
         position: absolute;
@@ -471,9 +373,6 @@ button {
         width:45px;
     }
     
-    #home:hover{
-        opacity: 0.5;
-    }
     
     #menue img{
         position: absolute;
@@ -483,94 +382,68 @@ button {
     }
     
     .inhalt{
-        display: none;
-        position: absolute;
-        right: 0px;
-        background-color: rgba(19, 19, 19);
-        width: 200px;
-    }
-    
-    .inhalt a {
-        color: white;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    
-      }
-    
-    #menue:hover .inhalt {
-          display: block;
-        }
-    
-    #menue:hover{
-            opacity: 0.7;
-        }
-    
-    .container_ueberschrift{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        width: 100px;
     }
 
     h1{
-        font-size:18px;
+        font-size:22px;
     }
     
     .container_ueberschrift div{
-        background-color: rgba(187, 187, 187, 0.9);
-        width: 390px;
-        height: 100%;
-        padding: 2px 2px 2px 2px; 
-        text-align: center;
-        margin-bottom: 10px;
-        border-radius: 20px;
-        margin-left: 10px;
+        margin-right: 10px;
+        width: 460px;
+        height: 50px;
+        padding: 5px 5px 5px 5px; 
         margin-top: 50px;
+        border-radius: 15px;
+    }
+
+    #Produkt2{
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
+    
+    #Produkt3{
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+    
+    #Produkt4{
+        grid-column-start: 2;
+        grid-row-start: 2;
+        grid-column-end: 2;
+        grid-row-end: 2;
     }
     
     
-    .container{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+    #Produkt6{
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
+    
+    #Produkt7{
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+    
+    #Produkt8{
+        grid-column-start: 2;
+        grid-row-start: 2;
+        grid-column-end: 2;
+        grid-row-end: 2;
     }
     
     .container img {
-        height: 50px ;
+        height: 150px ;
     }
-    
-    .container div{
-        background-color: rgba(187, 187, 187, 0.9);
-        width: 80px;
-        height: 100%;
-        padding: 5px 5px 5px 5px; 
-        text-align: center;
-        margin-bottom: 10px;
-        border-radius: 20px;
-        margin-left: 10px;
+
+    .container .Produkt{
+        width:  210px;
     }
     
     .container p{
-        font-size:7px;
-    }
-
-    h3{
-        font-size: 12px;
-    }
-
-    h4{
         font-size:12px;
     }
-    
-    
-    button {
-            background-color: rgb(0, 0, 0);
-            color: rgb(255, 255, 255);;
-            border-radius: 5px;
-            border-color: rgb(0, 0, 0);
-            padding: 3px 3px 3px 3px;
-            font-size: 8px;
-        }
         
     }
 
