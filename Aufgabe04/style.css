@@ -24,7 +24,7 @@ body {
     width: 100%;
 }
 
-.Leiste1 .navigatorrechts{
+.Leiste1 > .navigatorrechts{
     display: inline;
     list-style: none; 
 }
