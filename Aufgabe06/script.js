@@ -208,7 +208,7 @@ var Aufgabe06;
             document.getElementById("produktLippenstift" + i)?.appendChild(bildLippenstift);
             let nameLippenstift = document.createElement("h3");
             nameLippenstift.innerHTML = array[i].name;
-            document.getElementById("produkLippenstift" + i)?.appendChild(nameLippenstift);
+            document.getElementById("produktLippenstift" + i)?.appendChild(nameLippenstift);
             let beschreibungLippenstift = document.createElement("p");
             beschreibungLippenstift.innerHTML = array[i].beschreibung;
             document.getElementById("produktLippenstift" + i)?.appendChild(beschreibungLippenstift);
@@ -220,6 +220,7 @@ var Aufgabe06;
             document.getElementById("produktLippenstift" + i)?.appendChild(button);
             button.innerHTML = "In den Warenkorb";
             button.setAttribute("preis", array[i].preis.toLocaleString());
+            button.setAttribute("name", array[i].name);
             button.addEventListener("click", handlerWarenkorb);
         }
         else if (array[i].lipliner) {
@@ -243,6 +244,7 @@ var Aufgabe06;
             document.getElementById("produktLipliner" + i)?.appendChild(button);
             button.innerHTML = "In den Warenkorb";
             button.setAttribute("preis", array[i].preis.toLocaleString());
+            button.setAttribute("name", array[i].name);
             button.addEventListener("click", handlerWarenkorb);
         }
     }
@@ -257,8 +259,9 @@ var Aufgabe06;
         }
         zaehlerArtikel += 1;
         kreisDiv.innerHTML = zaehlerArtikel + "";
+        let nameProdukt = _event.currentTarget?.getAttribute("name");
         preisRechner += parseInt(_event.currentTarget?.getAttribute("preis"));
-        console.log("Warenkorbwert: " + preisRechner.toFixed(2) + " €");
+        console.log("+" + nameProdukt + " " + preisRechner.toFixed(2) + " €");
     }
     //Teilaufgabe 2
     let kategorieLippenstift = document.querySelector("#kLippenstift");

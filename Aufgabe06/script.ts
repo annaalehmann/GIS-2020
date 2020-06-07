@@ -258,7 +258,7 @@ for (let i: number = 0; i < array.length; i++) {
        
         let nameLippenstift: HTMLElement = document.createElement("h3");
         nameLippenstift.innerHTML = array[i].name;
-        document.getElementById("produkLippenstift" + i)?.appendChild(nameLippenstift);
+        document.getElementById("produktLippenstift" + i)?.appendChild(nameLippenstift);
  
         let beschreibungLippenstift: HTMLElement = document.createElement("p");
         beschreibungLippenstift.innerHTML = array[i].beschreibung;
@@ -274,6 +274,7 @@ for (let i: number = 0; i < array.length; i++) {
         document.getElementById("produktLippenstift" + i)?.appendChild(button);
         button.innerHTML = "In den Warenkorb";
         button.setAttribute("preis", array[i].preis.toLocaleString());
+        button.setAttribute("name", array[i].name);
         button.addEventListener("click", handlerWarenkorb);
     }
 
@@ -305,6 +306,7 @@ for (let i: number = 0; i < array.length; i++) {
     document.getElementById("produktLipliner" + i)?.appendChild(button);
     button.innerHTML = "In den Warenkorb";
     button.setAttribute("preis", array[i].preis.toLocaleString());
+    button.setAttribute("name", array[i].name);
     button.addEventListener("click", handlerWarenkorb);
 }
 }
@@ -325,8 +327,9 @@ if (zaehlerArtikel >= 0) {
 zaehlerArtikel += 1;
 kreisDiv.innerHTML = zaehlerArtikel + ""; 
 
+let nameProdukt: string = (<HTMLElement>_event.currentTarget)?.getAttribute("name")!;
 preisRechner += parseInt((<HTMLElement>_event.currentTarget)?.getAttribute("preis")!);
-console.log("Warenkorbwert: " + preisRechner.toFixed(2) + " €");
+console.log("+" + nameProdukt + " " + preisRechner.toFixed(2) + " €");
 }
 
 
