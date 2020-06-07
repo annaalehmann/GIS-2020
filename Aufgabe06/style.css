@@ -10,6 +10,59 @@ body {
     padding:0px;
 }
 
+.Leiste1{
+    display: grid;
+}
+
+.Leiste1 #box1 {
+    position: relative;
+    z-index: 800;
+    margin-top: 0px;
+    margin-left: 0px; 
+    margin-right: 0px;  
+    background-color: rgba(255, 0, 119);
+    height: 30px;
+    width: 100%;
+}
+
+.Leiste1 > .navigatorrechts{
+    z-index: 801;
+    display: inline;
+    list-style: none; 
+}
+
+.navigatorrechts {
+    z-index: 801;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+
+.navigatorrechts a{
+    z-index: 801;
+    text-decoration: none;
+    color: white;
+    font-size: 15px; 
+    margin-left: 20px;
+}
+
+
+.navigatorlinks *{
+    z-index: 801;
+    display: inline;
+    position: absolute;
+    left: 20px;
+    top: 5px;
+}
+
+.navigatorlinks p{
+    z-index: 801;
+    text-decoration: none;
+    color: white;
+    font-size: 15px; 
+    margin-top: 0px;
+}
+
 .Leiste{
     display:grid;
 }
@@ -26,9 +79,9 @@ body {
 
 #logo{
     position: fixed;
-    margin-top: -30px;
+    margin-top: 0px;
     left: 0px;
-    width: 350px;
+    width: 300px;
 }
 
 

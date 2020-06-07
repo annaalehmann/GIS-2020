@@ -270,8 +270,8 @@ var Aufgabe06;
     let kategorieLipliner = document.querySelector("#kLipliner");
     kategorieLipliner.id = "lipliner";
     kategorieLipliner.addEventListener("click", handlerKategorie1);
-    let kategorieBeide = document.querySelector("#home1");
-    kategorieBeide.id = "home";
+    let kategorieBeide = document.querySelector("#kalle");
+    kategorieBeide.id = "alle";
     kategorieBeide.addEventListener("click", handlerKategorie1);
     function handlerKategorie1(_event) {
         if (_event.currentTarget.getAttribute("id") == "lippenstift") {
@@ -280,7 +280,7 @@ var Aufgabe06;
         else if (_event.currentTarget.getAttribute("id") == "lipliner") {
             lipliner();
         }
-        else if (_event.currentTarget.getAttribute("id") == "beide") {
+        else if (_event.currentTarget.getAttribute("id") == "alle") {
             beide();
         }
     }
