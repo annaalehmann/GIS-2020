@@ -342,6 +342,10 @@ let kategorieLipliner: HTMLAnchorElement = <HTMLAnchorElement>document.querySele
 kategorieLipliner.id = "lipliner";
 kategorieLipliner.addEventListener("click", handlerKategorie1);
 
+let kategorieBeide: HTMLAnchorElement = <HTMLAnchorElement>document.querySelector("#home1");
+kategorieBeide.id = "home";
+kategorieBeide.addEventListener("click", handlerKategorie1);
+
 
 function handlerKategorie1 (_event: Event): void  {
     if ((<HTMLDivElement>_event.currentTarget).getAttribute("id") == "lippenstift") {
@@ -350,6 +354,10 @@ function handlerKategorie1 (_event: Event): void  {
 
     else if ((<HTMLDivElement>_event.currentTarget).getAttribute("id") == "lipliner") {
         lipliner();
+    }
+
+    else if ((<HTMLDivElement>_event.currentTarget).getAttribute("id") == "beide") {
+        beide();
     }
 }
 
@@ -363,6 +371,13 @@ function lippenstif(): void {
 function lipliner(): void {
     (<HTMLElement>document.getElementById("Lippenstift")).style.display = "none";
     (<HTMLElement>document.getElementById("lippenstift_ueberschrift")).style.display = "none";
+    (<HTMLElement>document.getElementById("Lipliner")).style.display = "inline-grid";
+    (<HTMLElement>document.getElementById("lipliner_ueberschrift")).style.display = "inline-grid";
+}
+
+function beide(): void {
+    (<HTMLElement>document.getElementById("Lippenstift")).style.display = "inline-grid";
+    (<HTMLElement>document.getElementById("lippenstift_ueberschrift")).style.display = "inline-grid";
     (<HTMLElement>document.getElementById("Lipliner")).style.display = "inline-grid";
     (<HTMLElement>document.getElementById("lipliner_ueberschrift")).style.display = "inline-grid";
 }
