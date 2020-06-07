@@ -310,6 +310,7 @@ for (let i: number = 0; i < array.length; i++) {
 }
 
 //Teilaufgabe 1
+
 let preisRechner: number = 0;
 let kreisDiv: HTMLDivElement = document.createElement("div");
 kreisDiv.id = "kreisDiv";
@@ -329,14 +330,12 @@ console.log("Warenkorbwert: " + preisRechner.toFixed(2) + " €");
 }
 
 
-
-
 //Teilaufgabe 2
-let kategorieLippenstift: HTMLDivElement = <HTMLDivElement>document.querySelector("#kLippenstift");
+let kategorieLippenstift: HTMLAnchorElement = <HTMLAnchorElement>document.querySelector("#kLippenstift");
 kategorieLippenstift.id = "lippenstift";
 kategorieLippenstift.addEventListener("click", handlerKategorie1);
 
-let kategorieLipliner: HTMLDivElement = <HTMLDivElement>document.querySelector("#kLipliner");
+let kategorieLipliner: HTMLAnchorElement = <HTMLAnchorElement>document.querySelector("#kLipliner");
 kategorieLipliner.id = "lipliner";
 kategorieLipliner.addEventListener("click", handlerKategorie1);
 
