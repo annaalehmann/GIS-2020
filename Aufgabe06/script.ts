@@ -238,6 +238,9 @@ let soar: Produkt = {
     lipliner: true
 };
 
+
+
+
 //Auf HTML Elemente zugreifen 
 
 let array: Array<Produkt> = [brave, mehr, faux, twig, kindaSexy, velvetTeddy, mocha, whirl, russianRed, ladyDanger, rubyWoo, fudge, cherryRed,
@@ -342,8 +345,8 @@ let kategorieLipliner: HTMLAnchorElement = <HTMLAnchorElement>document.querySele
 kategorieLipliner.id = "lipliner";
 kategorieLipliner.addEventListener("click", handlerKategorie1);
 
-let kategorieBeide: HTMLAnchorElement = <HTMLAnchorElement>document.querySelector("#home1");
-kategorieBeide.id = "home";
+let kategorieBeide: HTMLAnchorElement = <HTMLAnchorElement>document.querySelector("#kalle");
+kategorieBeide.id = "alle";
 kategorieBeide.addEventListener("click", handlerKategorie1);
 
 
@@ -356,7 +359,7 @@ function handlerKategorie1 (_event: Event): void  {
         lipliner();
     }
 
-    else if ((<HTMLDivElement>_event.currentTarget).getAttribute("id") == "beide") {
+    else if ((<HTMLDivElement>_event.currentTarget).getAttribute("id") == "alle") {
         beide();
     }
 }

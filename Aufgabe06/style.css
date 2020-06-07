@@ -10,60 +10,13 @@ body {
     padding:0px;
 }
 
-    .Leiste{
-        display:grid;
-    }
-
-.Leiste1 #box1 {
-    position:realtive;
-    margin-top: 0px;
-    margin-left: 0px; 
-    margin-right: 0px;  
-    background-color: rgba(255, 0, 119, 0.753);
-    height: 30px;
-    width: 100%;
-}
-
-.Leiste1 > .navigatorrechts{
-    display: inline;
-    list-style: none; 
-}
-
-.navigatorrechts {
-    position: absolute;
-    right: 20px;
-    top: 5px;
-}
-
-.navigatorrechts a{
-    text-decoration: none;
-    color: white;
-    font-size: 15px; 
-    margin-left: 20px;
-}
-
-
-.navigatorlinks *{
-    display: inline;
-    position: absolute;
-    left: 20px;
-    top: 5px;
-}
-
-.navigatorlinks p{
-    text-decoration: none;
-    color: white;
-    font-size: 15px; 
-    margin-top: 0px;
-}
-
 .Leiste{
     display:grid;
 }
 
-.Leiste1 + .Leiste>#box {
-    position: relative;
-    margin-top: 0px;
+.Leiste {
+    position: fixed;
+    top: 0px;
     margin-left: 0px; 
     margin-right: 0px;  
     background-color: rgba(19, 19, 19);
@@ -72,17 +25,17 @@ body {
 }
 
 #logo{
-    position: absolute;
-    top: 0px;
+    position: fixed;
+    margin-top: -30px;
     left: 0px;
     width: 350px;
 }
 
 
 img[alt=Warenkorb]{
-    position: absolute;
-    top: 110px; 
-    right: 135px; 
+    position: fixed;
+    top: 92px; 
+    right: 130px; 
     width:70px;
 }
 
@@ -91,9 +44,9 @@ img[alt=Warenkorb]{
 }
 
 #kreisDiv{
-    position: absolute; 
-    top: 110px;
-    right: 140px;
+    position: fixed; 
+    top: 92px;
+    right: 135px;
     width: 20px; 
     height: 20px; 
     background-color: rgba(255, 0, 119);
@@ -104,9 +57,9 @@ img[alt=Warenkorb]{
 }
 
 #home{
-    position: absolute;
-    top: 57px; 
-    right: 35px; 
+    position: fixed;
+    top: 95px; 
+    right: 65px; 
     width:80px;
 }
 
@@ -115,15 +68,16 @@ img[alt=Warenkorb]{
 }
 
 #menue img{
-    position: absolute;
-    top: 100px; 
+    position: fixed;
+    top: 80px; 
     right: 0px; 
     width:95px;
 }
 
 .inhalt{
     display: none;
-    position: absolute;
+    position: fixed;
+    top: 145px;
     right: 0px;
     background-color: rgba(19, 19, 19);
     width: 200px;
@@ -149,6 +103,7 @@ img[alt=Warenkorb]{
     display: grid;
     justify-content: center;
     grid-gap: 30px 5px;
+    margin-top: 100px;
 }
 
 .container_ueberschrift div{
