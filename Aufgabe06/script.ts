@@ -309,13 +309,12 @@ for (let i: number = 0; i < array.length; i++) {
 }
 }
 
-
+//Teilaufgabe 1
 let preisRechner: number = 0;
 let kreisDiv: HTMLDivElement = document.createElement("div");
 kreisDiv.id = "kreisDiv";
 let zaehlerArtikel: number = 0;
 
-//Teilaufgabe 1
 function handlerWarenkorb(_event: Event): void { 
 
 if (zaehlerArtikel >= 0) {

@@ -246,11 +246,11 @@ var Aufgabe06;
             button.addEventListener("click", handlerWarenkorb);
         }
     }
+    //Teilaufgabe 1
     let preisRechner = 0;
     let kreisDiv = document.createElement("div");
     kreisDiv.id = "kreisDiv";
     let zaehlerArtikel = 0;
-    //Teilaufgabe 1
     function handlerWarenkorb(_event) {
         if (zaehlerArtikel >= 0) {
             document.getElementById("warenkorbZaehler")?.appendChild(kreisDiv);
