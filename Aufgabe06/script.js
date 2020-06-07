@@ -270,12 +270,18 @@ var Aufgabe06;
     let kategorieLipliner = document.querySelector("#kLipliner");
     kategorieLipliner.id = "lipliner";
     kategorieLipliner.addEventListener("click", handlerKategorie1);
+    let kategorieBeide = document.querySelector("#home1");
+    kategorieBeide.id = "home";
+    kategorieBeide.addEventListener("click", handlerKategorie1);
     function handlerKategorie1(_event) {
         if (_event.currentTarget.getAttribute("id") == "lippenstift") {
             lippenstif();
         }
         else if (_event.currentTarget.getAttribute("id") == "lipliner") {
             lipliner();
+        }
+        else if (_event.currentTarget.getAttribute("id") == "beide") {
+            beide();
         }
     }
     function lippenstif() {
@@ -287,6 +293,12 @@ var Aufgabe06;
     function lipliner() {
         document.getElementById("Lippenstift").style.display = "none";
         document.getElementById("lippenstift_ueberschrift").style.display = "none";
+        document.getElementById("Lipliner").style.display = "inline-grid";
+        document.getElementById("lipliner_ueberschrift").style.display = "inline-grid";
+    }
+    function beide() {
+        document.getElementById("Lippenstift").style.display = "inline-grid";
+        document.getElementById("lippenstift_ueberschrift").style.display = "inline-grid";
         document.getElementById("Lipliner").style.display = "inline-grid";
         document.getElementById("lipliner_ueberschrift").style.display = "inline-grid";
     }
