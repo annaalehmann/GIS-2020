@@ -1,0 +1,399 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    text-align: center;
+    background-image: url(Bilder/marmor_hintergrund.jpg);
+    font-family: sans-serif;
+    margin:0px;
+    padding:0px;
+}
+
+.Leiste1{
+    display: grid;
+}
+
+.Leiste1 #box1 {
+    position: relative;
+    z-index: 800;
+    margin-top: 0px;
+    margin-left: 0px; 
+    margin-right: 0px;  
+    background-color: rgba(255, 0, 119);
+    height: 30px;
+    width: 100%;
+}
+
+.Leiste1 > .navigatorrechts{
+    z-index: 801;
+    display: inline;
+    list-style: none; 
+}
+
+.navigatorrechts {
+    z-index: 801;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+
+.navigatorrechts a{
+    z-index: 801;
+    text-decoration: none;
+    color: white;
+    font-size: 15px; 
+    margin-left: 20px;
+}
+
+
+.navigatorlinks *{
+    z-index: 801;
+    display: inline;
+    position: absolute;
+    left: 20px;
+    top: 5px;
+}
+
+.navigatorlinks p{
+    z-index: 801;
+    text-decoration: none;
+    color: white;
+    font-size: 15px; 
+    margin-top: 0px;
+}
+
+.Leiste{
+    display:grid;
+}
+
+.Leiste {
+    position: fixed;
+    top: 0px;
+    margin-left: 0px; 
+    margin-right: 0px;  
+    background-color: rgba(19, 19, 19);
+    height: 150px;
+    width: 100%;
+}
+
+#logo{
+    position: fixed;
+    margin-top: 0px;
+    left: 0px;
+    width: 300px;
+}
+
+
+img[alt=Warenkorb]{
+    position: fixed;
+    top: 92px; 
+    right: 130px; 
+    width:70px;
+}
+
+#warenkorb:hover{
+    opacity: 0.5;
+}
+
+#kreisDiv{
+    position: fixed; 
+    top: 92px;
+    right: 135px;
+    width: 20px; 
+    height: 20px; 
+    background-color: rgba(255, 0, 119);
+    border-radius: 20px;
+    color: white; 
+    font-size: 15px;
+    text-align: center;
+}
+
+#home{
+    position: fixed;
+    top: 95px; 
+    right: 65px; 
+    width:80px;
+}
+
+#home:hover{
+    opacity: 0.5;
+}
+
+#menue img{
+    position: fixed;
+    top: 80px; 
+    right: 0px; 
+    width:95px;
+}
+
+.inhalt{
+    display: none;
+    position: fixed;
+    top: 145px;
+    right: 0px;
+    background-color: rgba(19, 19, 19);
+    width: 200px;
+}
+
+.inhalt a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+  }
+
+#menue:hover .inhalt {
+      display: block;
+    }
+
+#menue:hover{
+        opacity: 0.7;
+    }
+
+.container_ueberschrift{
+    display: grid;
+    justify-content: center;
+    grid-gap: 30px 5px;
+    margin-top: 100px;
+}
+
+.container_ueberschrift div{
+    background-color: rgba(187, 187, 187, 0.9);
+    width: 925px;
+    height: 80px;
+    padding: 10px 10px 10px 10px; 
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-top: 100px;
+}
+
+.container{
+    display: grid;
+    grid-gap: 30px 30px;
+    justify-content: center;
+    grid-template-columns: repeat(4, 210px);
+    width: 100%;
+    
+}
+
+.container img{
+    height: 200px ;
+}
+
+.container div{
+    display:block;
+    justify-content:center;
+    grid-template-columns:1fr;
+    background-color: rgba(187, 187, 187, 0.9);
+    width: 210px;
+    height: 100%;
+    padding: 10px 10px 10px 10px; 
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.container div:hover{
+    background-color: white;
+}
+
+.container p{
+    font-size:12px;
+}
+
+
+button {
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);;
+        border-radius: 5px;
+        border-color: rgb(0, 0, 0);
+        padding: 5px 5px 5px 5px;
+    }
+
+@media screen and (min-width: 600px) and (max-width: 1024px){
+
+    
+    .Leiste1 #box1 {
+        height: 25px;
+    }
+    
+    .navigatorrechts {
+        top: 3px;
+    }
+    
+    .navigatorrechts a{
+        font-size: 12px; 
+    }
+    
+    
+    .navigatorlinks *{
+        top: 5.5px;
+    }
+    
+    .navigatorlinks p{
+        font-size: 12px; 
+    }
+    
+
+    .Leiste1 + .Leiste>#box { 
+        height: 100px;
+    }
+    
+    #logo{
+        top:5px;
+        width: 240px;
+    }
+    
+    
+    img[alt=Warenkorb]{
+        top: 80px; 
+        right: 95px; 
+        width:52px;
+    }
+    
+    #home{
+        top: 83px; 
+        right: 50px; 
+        width:60px;
+    }
+    
+    #menue img{
+        top: 70px; 
+        width:75px;
+    }
+    
+    
+    .container_ueberschrift div{
+        height: 70px;
+        width: 600px;
+        margin-top: 70px;
+        margin-left: 20px;
+    }
+
+    .container{
+        grid-template-columns: repeat(3, 180px);
+        width: 100%;        
+    }
+
+    .container div{
+        grid-template-columns:1fr;
+        width: 180px;
+    }
+
+    h1{
+        font-size: 27px;
+    }
+    
+    .container img {
+        height: 150px ;
+    }
+  
+    .container p{
+        font-size:12px;
+    }
+}
+
+    @media screen and (max-width:600px){
+        
+    .Leiste1 #box1 {
+        height: 20px;
+    }
+    
+    
+    .navigatorrechts a{
+        font-size: 10px; 
+    }
+
+    .navigatorrechts {
+        top: 0px;
+    }
+    
+    
+    .navigatorlinks p{
+        font-size: 10px; 
+        margin-top: 0px;
+    }
+    
+    .Leiste{
+        display:flexbox;
+    }
+    
+    .Leiste1 + .Leiste>#box {
+        height: 70px;
+    }
+    
+    #logo{
+        top: 10px;
+        width: 150px;
+    }
+    
+    
+    img[alt=Warenkorb]{
+        top: 60px; 
+        right: 75px; 
+        width:40px;
+    }
+    
+    
+    #home{
+        position: absolute;
+        top: 62px; 
+        right:40px; 
+        width:45px;
+    }
+    
+    
+    #menue img{
+        position: absolute;
+        top: 52px; 
+        right: 0px; 
+        width:57px;
+    }
+    
+    .inhalt{
+        width: 100px;
+    }
+
+    h1{
+        font-size:22px;
+    }
+    
+    .container_ueberschrift div{
+        margin-left: 15px;
+        width: 440px;
+        height: 50px;
+        padding: 5px 5px 5px 5px; 
+        margin-top: 50px;
+        border-radius: 15px;
+    }
+
+    .container{
+        grid-template-columns: repeat(2, 200px);
+        width: 100%;        
+    }
+
+    .container div{
+        grid-template-columns:1fr;
+        width: 200px;
+    }
+   
+
+    
+    .container img {
+        height: 150px ;
+    }
+
+    .container .Produkt{
+        width:  210px;
+    }
+    
+    .container p{
+        font-size:12px;
+    }
+        
+    }
+
