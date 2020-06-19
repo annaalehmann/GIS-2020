@@ -51,8 +51,6 @@ namespace Aufgabe07 {
     let kreisDiv: HTMLDivElement = document.createElement("div");
     kreisDiv.id = "kreisDiv";
     let zaehlerArtikel: number = 0;
-    let ind: number = 0; 
-
 
     function handlerWarenkorb(_event: Event): void {
 

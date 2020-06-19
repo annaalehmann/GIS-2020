@@ -280,15 +280,14 @@ img[alt=Warenkorb]{
 #löschenButton{
     text-decoration: none; 
     background-color: white; 
-    color: black; 
     font-size: 15px;
     position: absolute;
     bottom: 17px; 
     right: 200px;
     border-radius: 15px;
     padding: 5px 5px 5px 5px;
-    width: 100px; 
-    height: 20px; 
+    width: 120px; 
+    height: 30px; 
 }
 
 @media screen and (min-width: 600px) and (max-width: 1024px){

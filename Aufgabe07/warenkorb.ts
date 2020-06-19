@@ -1,8 +1,6 @@
 namespace Aufgabe07 {
 
-    let gesamtpreis: HTMLParagraphElement = document.createElement("p");
-
-    for (let i: number = 0; i <= localStorage.length; i++) {
+    for (let i: number = 0; i < localStorage.length; i++) {
 
         let div: HTMLDivElement = document.createElement("div");
         document.getElementById("inhaltKorb")?.appendChild(div);
@@ -28,11 +26,13 @@ namespace Aufgabe07 {
         löschen.addEventListener("click", handlelöschen);
         löschen.setAttribute("delete", i + "");
         div.setAttribute("löschen", i + "");
-
-        let allesLöschen: HTMLButtonElement = document.createElement("button");
-        document.getElementById("löschenButton")?.appendChild(allesLöschen);
-        allesLöschen.addEventListener("click", handleAllesLöschen);
     }
+
+    let gesamtpreis: HTMLParagraphElement = document.createElement("p");
+    //Button erstellen 
+    let allesLöschen: HTMLButtonElement = document.createElement("button");
+    document.getElementById("löschenButton")?.appendChild(allesLöschen);
+    addEventListener("click", handleAllesLöschen);
 
     function handlelöschen(_event: Event): void {
         let löschen: string = (<HTMLElement>_event.target).getAttribute("delete")!;
