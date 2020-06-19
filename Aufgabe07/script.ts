@@ -51,6 +51,7 @@ namespace Aufgabe07 {
     let kreisDiv: HTMLDivElement = document.createElement("div");
     kreisDiv.id = "kreisDiv";
     let zaehlerArtikel: number = 0;
+    let ind: number = 0; 
 
 
     function handlerWarenkorb(_event: Event): void {
@@ -73,6 +74,7 @@ namespace Aufgabe07 {
         localStorage.setItem("namen" + zaehlerArtikel, produkte[arvar].name);
         localStorage.setItem("preis" + zaehlerArtikel, (produkte[arvar].preis).toString());
         localStorage.setItem("bild" + zaehlerArtikel, produkte[arvar].bild);
+        ind++;
 
         console.log(localStorage);
     }

@@ -7,7 +7,7 @@ namespace Aufgabe07 {
         div.id = "warenkorb" + i;
 
         let bild: HTMLImageElement = document.createElement("img");
-        bild.src = "" + localStorage.getItem(bild + "");
+        bild.src =  "" + localStorage.getItem("bild" + i);
         div.appendChild(bild);
 
         let name: HTMLElement = document.createElement("h3");
@@ -29,11 +29,11 @@ namespace Aufgabe07 {
 
 
 
-function handlelöschen(_event: Event): void {
-    let löschen: string = (<HTMLElement>_event.target).getAttribute("delete")!;
-    localStorage.removeItem(löschen);
-    (<HTMLDivElement>document.getElementById("warenkorb" + löschen)).remove();
-}
+    function handlelöschen(_event: Event): void {
+        let löschen: string = (<HTMLElement>_event.target).getAttribute("delete")!;
+        localStorage.removeItem(löschen);
+        (<HTMLDivElement>document.getElementById("warenkorb" + löschen)).remove();
+    }
 
 }
 

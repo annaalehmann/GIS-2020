@@ -217,11 +217,11 @@ img[alt=Warenkorb]{
     display: grid;
     grid-gap: 30px 30px;
     justify-content: center;
-    grid-template-columns: auto;
     width: 100%;
 }
 
 .inhaltsWarenkorb div{
+    display: block;
     justify-content:center;
     background-color: rgba(187, 187, 187, 0.9);
     width: 210px;
