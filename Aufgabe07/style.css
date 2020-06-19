@@ -213,19 +213,16 @@ img[alt=Warenkorb]{
         border-color: rgb(0, 0, 0);
         padding: 5px 5px 5px 5px;
 }
-
-.produkte{
+.inhaltsWarenkorb{
     display: grid;
     grid-gap: 30px 30px;
     justify-content: center;
-    grid-template-columns: repeat(4, 210px);
+    grid-template-columns: auto;
     width: 100%;
 }
 
-.produkte div{
-    display:block;
+.inhaltsWarenkorb div{
     justify-content:center;
-    grid-template-columns:1fr;
     background-color: rgba(187, 187, 187, 0.9);
     width: 210px;
     height: 100%;
@@ -235,20 +232,49 @@ img[alt=Warenkorb]{
     border-radius: 20px;
 }
 
-.produkte img{
+.inhaltsWarenkorb img{
     height: 200px ;
 }
 
-.produkte p{
+.inhaltsWarenkorb p{
     font-size:12px;
 }
 
-.produkte button{
+.inhaltsWarenkorb button{
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);;
     border-radius: 5px;
     border-color: rgb(0, 0, 0);
     padding: 5px 5px 5px 5px;
+}
+
+.inhaltsWarenkorb h3 {
+    color: black;
+}
+
+.inhaltsWarenkorb h3 {
+    color: black;
+}
+
+
+.titelWarenkorb{
+    display: grid;
+    justify-content: center;
+    grid-gap: 30px 5px;
+    margin-top: 100px;
+    color: black; 
+}
+
+.titelWarenkorb div{
+    background-color: rgba(187, 187, 187, 0.9);
+    width: 925px;
+    height: 80px;
+    padding: 10px 10px 10px 10px; 
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-top: 100px;
 }
 
 @media screen and (min-width: 600px) and (max-width: 1024px){

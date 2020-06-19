@@ -5,10 +5,21 @@ namespace Aufgabe07 {
         name: string;
         beschreibung: string;
         preis: number;
-        lippenstift: boolean;
-        lipliner: boolean;
+        kategorie: number;
     }
 
-    export let array: Produkt[];
+    export let produkte: Produkt[];
+    loadArtikel("produkte.json");
+
+    async function loadArtikel(_url: RequestInfo): Promise<void> {
+        let response: Response = await fetch(_url);
+        let jsonArray: JSON = await response.json();
+        console.log(jsonArray);
+
+        produkte = await JSON.parse(JSON.stringify(jsonArray));
+        console.log(produkte);
+
+        getProdukte();
+}
 
 }
