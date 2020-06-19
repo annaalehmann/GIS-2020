@@ -12,7 +12,7 @@ namespace Aufgabe082 {
 
     function clickButton(): void {
         let formData: FormData = new FormData(document.forms[0]);
-        let url: string = "https://.herokuapp.com";
+        let url: string = "https://annaalehmanngis.herokuapp.com";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url = url + "?" + query.toString();
         
