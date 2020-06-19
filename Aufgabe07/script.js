@@ -49,11 +49,11 @@ var Aufgabe07;
         preisRechner += parseInt(_event.currentTarget?.getAttribute("preis"));
         console.log("+" + nameProdukt + " " + preisRechner.toFixed(2) + " €");
         let target = _event.target;
-        let wclick = "" + target.getAttribute("newIndex");
-        let arvar = +wclick;
-        localStorage.setItem("namen" + zaehlerArtikel, Aufgabe07.produkte[arvar].name);
-        localStorage.setItem("preis" + zaehlerArtikel, (Aufgabe07.produkte[arvar].preis).toString());
-        localStorage.setItem("bild" + zaehlerArtikel, Aufgabe07.produkte[arvar].bild);
+        let indexClick = "" + target.getAttribute("newIndex");
+        let indexNr = +indexClick;
+        localStorage.setItem("namen", Aufgabe07.produkte[indexNr].name);
+        localStorage.setItem("preis", (Aufgabe07.produkte[indexNr].preis).toString());
+        localStorage.setItem("bild", Aufgabe07.produkte[indexNr].bild);
         console.log(localStorage);
     }
     //Teilaufgabe 2
