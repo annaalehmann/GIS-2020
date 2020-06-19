@@ -68,13 +68,12 @@ namespace Aufgabe07 {
         console.log("+" + nameProdukt + " " + preisRechner.toFixed(2) + " €");
 
         let target: HTMLElement = (<HTMLElement>_event.target);
-        let wclick: string = "" + target.getAttribute("newIndex");
-        let arvar: number = + wclick;
+        let indexClick: string = "" + target.getAttribute("newIndex");
+        let indexNr: number = + indexClick;
 
-        localStorage.setItem("namen" + zaehlerArtikel, produkte[arvar].name);
-        localStorage.setItem("preis" + zaehlerArtikel, (produkte[arvar].preis).toString());
-        localStorage.setItem("bild" + zaehlerArtikel, produkte[arvar].bild);
-        ind++;
+        localStorage.setItem("namen" + zaehlerArtikel, produkte[indexNr].name);
+        localStorage.setItem("preis" + zaehlerArtikel, (produkte[indexNr].preis).toString());
+        localStorage.setItem("bild" + zaehlerArtikel, produkte[indexNr].bild);
 
         console.log(localStorage);
     }
