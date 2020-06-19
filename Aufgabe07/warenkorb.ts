@@ -28,11 +28,11 @@ namespace Aufgabe07 {
         löschen.addEventListener("click", handlelöschen);
         löschen.setAttribute("delete", i + "");
         div.setAttribute("löschen", i + "");
-    }
 
-    let allesLöschen: HTMLButtonElement = document.createElement("button");
-    document.getElementById("löschenButton")?.appendChild(allesLöschen);
-    allesLöschen.addEventListener("click", handleAllesLöschen);
+        let allesLöschen: HTMLButtonElement = document.createElement("button");
+        document.getElementById("löschenButton")?.appendChild(allesLöschen);
+        allesLöschen.addEventListener("click", handleAllesLöschen);
+    }
 
     function handlelöschen(_event: Event): void {
         let löschen: string = (<HTMLElement>_event.target).getAttribute("delete")!;
