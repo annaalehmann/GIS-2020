@@ -71,9 +71,9 @@ namespace Aufgabe07 {
         let indexClick: string = "" + target.getAttribute("newIndex");
         let indexNr: number = + indexClick;
 
-        localStorage.setItem("namen" + zaehlerArtikel, produkte[indexNr].name);
-        localStorage.setItem("preis" + zaehlerArtikel, (produkte[indexNr].preis).toString());
-        localStorage.setItem("bild" + zaehlerArtikel, produkte[indexNr].bild);
+        localStorage.setItem("namen", produkte[indexNr].name);
+        localStorage.setItem("preis", (produkte[indexNr].preis).toString());
+        localStorage.setItem("bild", produkte[indexNr].bild);
 
         console.log(localStorage);
     }
