@@ -1,39 +1,36 @@
 namespace Aufgabe07 {
 
-
-    export function get(): void {
-        for (let i: number = 0; i < produkt.length; i++) {
+    export function getProdukte(): void {
+        for (let i: number = 0; i < produkte.length; i++) {
 
             let div: HTMLDivElement = document.createElement("div");
             div.id = "produkte" + i;
 
-            if (produkt[i].kategorie == 1) {
-                document.getElementById("Lippenstift")?.appendChild(div);
-                div.setAttribute("NewIndex", i.toString());
+            if (produkte[i].kategorie == 1) {
+                document.getElementById("Lippenstift")?.appendChild(div);  
             }
 
-            else if (produkt[i].kategorie == 2) {
+            else if (produkte[i].kategorie == 2) {
                 document.getElementById("Lipliner")?.appendChild(div);
-                div.setAttribute("NewIndex", i.toString());
 
             }
 
-
+            
             let bild: HTMLImageElement = document.createElement("img");
-            bild.src = produkt[i].bild;
+            bild.src = produkte[i].bild;
             div.appendChild(bild);
 
             let name: HTMLElement = document.createElement("h3");
-            name.innerHTML = produkt[i].name;
+            name.innerHTML = produkte[i].name;
             div.appendChild(name);
 
             let beschreibung: HTMLElement = document.createElement("p");
-            beschreibung.innerHTML = produkt[i].beschreibung;
+            beschreibung.innerHTML = produkte[i].beschreibung;
             div.appendChild(beschreibung);
 
 
             let preis: HTMLElement = document.createElement("h4");
-            preis.innerHTML = produkt[i].preis.toFixed(2) + "€";
+            preis.innerHTML = produkte[i].preis.toFixed(2) + "€";
             div.appendChild(preis);
 
 
@@ -41,19 +38,19 @@ namespace Aufgabe07 {
             div.appendChild(button);
             button.innerHTML = "In den Warenkorb";
 
-            button.setAttribute("preis", produkt[i].preis.toLocaleString());
-            button.setAttribute("name", produkt[i].name);
+            button.setAttribute("preis", produkte[i].preis.toLocaleString());
+            button.setAttribute("name", produkte[i].name);
             button.addEventListener("click", handlerWarenkorb);
+            button.setAttribute("newIndex", i.toString());
         }
     }
 
+    Aufgabe07.getProdukte = getProdukte;
     //Teilaufgabe 1
     let preisRechner: number = 0;
     let kreisDiv: HTMLDivElement = document.createElement("div");
     kreisDiv.id = "kreisDiv";
     let zaehlerArtikel: number = 0;
-
-    let inhaltWarenkorb: Produkt[] = [];
 
     function handlerWarenkorb(_event: Event): void {
 
@@ -68,17 +65,15 @@ namespace Aufgabe07 {
         preisRechner += parseInt((<HTMLElement>_event.currentTarget)?.getAttribute("preis")!);
         console.log("+" + nameProdukt + " " + preisRechner.toFixed(2) + " €");
 
-        let inBu: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("NewIndex")!;
-        let iNr: number = parseInt(inBu);
+        let target: HTMLElement = (<HTMLElement>_event.target);
+        let indexClick: string = "" + target.getAttribute("newIndex");
+        let indexNr: number = + indexClick;
 
-        inhaltWarenkorb.push(produkt[iNr]);
-        localStorage.setItem("bild", produkt[iNr].bild);
-        localStorage.setItem("name", produkt[iNr].name);
-        localStorage.setItem("preis", produkt[iNr].preis.toString());
-        localStorage.setItem("anzahlProdukte", inhaltWarenkorb.length.toString());
+        localStorage.setItem("namen", produkte[indexNr].name);
+        localStorage.setItem("preis", (produkte[indexNr].preis).toString());
+        localStorage.setItem("bild", produkte[indexNr].bild);
 
         console.log(localStorage);
-        console.log(inhaltWarenkorb.length);
     }
 
 

@@ -1,0 +1,170 @@
+[
+    {
+        "bild": "mac_lipstick/mac_brave.png",
+        "name": "Brave",
+        "beschreibung": "Ein cremiger Lippenstift mit weichem Gefühl, mittlerer bis voller, aufbaubarer Deckkraft und Satin finish.",
+        "preis": 21.00,
+        "kategorie": "1"
+    },
+    {
+        "bild": "mac_lipstick/mac_mehr.png",
+        "name": "Mehr",
+        "beschreibung": "Eine cremig, reichhaltige Formel mit starker Farbpigmentierung und Mattem, nicht-glänzendem Finish.",
+        "preis": 22.00,
+        "kategorie": "1"
+    },
+    {
+        "bild": "mac_lipstick/mac_faux.png",
+        "name": "Faux",
+        "beschreibung": "Ein cremiger Lippenstift mit weichem Gefühl, mittlerer bis voller, aufbaubarer Deckkraft und Satin finish.",
+        "preis": 22.00,
+        "kategorie": "1"
+    },
+    {
+        "bild": "mac_lipstick/mac_twig.png",
+        "name": "Twig",
+        "beschreibung": "Ein cremiger Lippenstift mit weichem Gefühl, mittlerer bis voller, aufbaubarer Deckkraft und Satin finish.",
+        "preis": 23.00,
+        "kategorie": "1"
+    },
+    {
+        "bild": "mac_lipstick/mac_kinda_sexy.png",
+        "name": "Kinda Sexy",
+        "beschreibung": "Eine cremig, reichhaltige Formel mit starker Farbpigmentierung und Mattem, nicht-glänzendem Finish.",
+        "preis": 24.00,
+        "kategorie": "1"
+    },
+    {
+        "bild": "mac_lipstick/mac_velvet_teddy.png",
+        "name": "Velvet Teddy",
+        "beschreibung": "Eine cremig, reichhaltige Formel mit starker Farbpigmentierung und Mattem, nicht-glänzendem Finish.",
+        "preis": 21.00,
+        "kategorie": "1"
+    },
+    {
+        "bild": "mac_lipstick/mac_mocha.png",
+        "name": "Mocha",
+        "beschreibung": "Ein cremiger Lippenstift mit weichem Gefühl, mittlerer bis voller, aufbaubarer Deckkraft und Satin finish.",
+        "preis": 22.00,
+        "kategorie": "1"
+    },
+    {
+        "bild": "mac_lipstick/mac_whirl.png",
+        "name": "Whirl",
+        "beschreibung": "Eine cremig, reichhaltige Formel mit starker Farbpigmentierung und Mattem, nicht-glänzendem Finish.",
+        "preis": 23.00,
+        "kategorie": "1"
+    },
+    {
+        "bild": "mac_lipstick/mac_russian_red.png",
+        "name": "Russian Red",
+        "beschreibung": "Eine cremig, reichhaltige Formel mit starker Farbpigmentierung und Mattem, nicht-glänzendem Finish.",
+        "preis": 24.00,
+        "kategorie": "1"
+    },
+    {
+        "bild": "mac_lipstick/mac_lady_danger.png",
+        "name": "Lady Danger",
+        "beschreibung": "Eine cremig, reichhaltige Formel mit starker Farbpigmentierung und Mattem, nicht-glänzendem Finish.",
+        "preis": 22.00,
+        "kategorie": "1"
+    },
+    {
+        "bild": "mac_lipstick/mac_ruby_woo.png",
+        "name": "Ruby Woo",
+        "beschreibung": "Eine cremig, reichhaltige Formel mit starker Farbpigmentierung und Mattem, nicht-glänzendem Finish.",
+        "preis": 23.00,
+        "kategorie": "1"
+    },
+    {
+        "bild": "mac_lipstick/mac_double_fudge.png",
+        "name": "Fudge",
+        "beschreibung": "Eine cremig, reichhaltige Formel mit starker Farbpigmentierung und Mattem, nicht-glänzendem Finish.",
+        "preis": 24.00,
+        "kategorie": "1"
+    },
+    {
+        "bild": "mac_lip_pensil/mac_cherry_red.png",
+        "name": "Cherry Red",
+        "beschreibung": "Lippenkonturenstift in einer großen Auswahl an Farbnuancen für das definieren, umranden oder ausfüllen der Lippen.",
+        "preis": 17.00,
+        "kategorie": "2"
+    },
+    {
+        "bild": "mac_lip_pensil/mac_chicory.png",
+        "name": "Chicory",
+        "beschreibung": "Lippenkonturenstift in einer großen Auswahl an Farbnuancen für das definieren, umranden oder ausfüllen der Lippen.",
+        "preis": 18.00,
+        "kategorie": "2"
+    },
+    {
+        "bild": "mac_lip_pensil/mac_cork.png",
+        "name": "Cork",
+        "beschreibung": "Lippenkonturenstift in einer großen Auswahl an Farbnuancen für das definieren, umranden oder ausfüllen der Lippen.",
+        "preis": 19.00,
+        "kategorie": "2"
+    },
+    {
+        "bild": "mac_lip_pensil/mac_dervish.png",
+        "name": "Dervish",
+        "beschreibung": "Lippenkonturenstift in einer großen Auswahl an Farbnuancen für das definieren, umranden oder ausfüllen der Lippen.",
+        "preis": 20.00,
+        "kategorie": "2"
+    },
+    {
+        "bild": "mac_lip_pensil/mac_half_red.png",
+        "name": "Half Red",
+        "beschreibung": "Lippenkonturenstift in einer großen Auswahl an Farbnuancen für das definieren, umranden oder ausfüllen der Lippen.",
+        "preis": 16.00,
+        "kategorie": "2"
+    },
+    {
+        "bild": "mac_lip_pensil/mac_hover.png",
+        "name": "Hover",
+        "beschreibung": "Lippenkonturenstift in einer großen Auswahl an Farbnuancen für das definieren, umranden oder ausfüllen der Lippen.",
+        "preis": 17.00,
+        "kategorie": "2"
+    },
+    {
+        "bild": "mac_lip_pensil/mac_oak.png",
+        "name": "Oak",
+        "beschreibung": "Lippenkonturenstift in einer großen Auswahl an Farbnuancen für das definieren, umranden oder ausfüllen der Lippen.",
+        "preis": 17.00,
+        "kategorie": "2"
+    },
+    {
+        "bild": "mac_lip_pensil/mac_redd.png",
+        "name": "Mac Redd",
+        "beschreibung": "Lippenkonturenstift in einer großen Auswahl an Farbnuancen für das definieren, umranden oder ausfüllen der Lippen.",
+        "preis": 18.00,
+        "kategorie": "2"
+    },
+    {
+        "bild": "mac_lip_pensil/mac_rosy_rim.png",
+        "name": "Rosy Rim",
+        "beschreibung": "Lippenkonturenstift in einer großen Auswahl an Farbnuancen für das definieren, umranden oder ausfüllen der Lippen.",
+        "preis": 19.00,
+        "kategorie": "2"
+    },
+    {
+        "bild": "mac_lip_pensil/mac_ruby_woo.png",
+        "name": "Ruby Woo",
+        "beschreibung": "Lippenkonturenstift in einer großen Auswahl an Farbnuancen für das definieren, umranden oder ausfüllen der Lippen.",
+        "preis": 18.00,
+        "kategorie": "2"
+    },
+    {
+        "bild": "mac_lip_pensil/mac_sensation.png",
+        "name": "Sensation",
+        "beschreibung": "Lippenkonturenstift in einer großen Auswahl an Farbnuancen für das definieren, umranden oder ausfüllen der Lippen.",
+        "preis": 19.00,
+        "kategorie": "2"
+    },
+    {
+        "bild": "mac_lip_pensil/mac_soar.png",
+        "name": "Soar",
+        "beschreibung": "Lippenkonturenstift in einer großen Auswahl an Farbnuancen für das definieren, umranden oder ausfüllen der Lippen.",
+        "preis": 17.00,
+        "kategorie": "2"
+    }
+]

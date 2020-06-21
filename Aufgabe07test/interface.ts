@@ -8,7 +8,7 @@ namespace Aufgabe07 {
         kategorie: number;
     }
 
-    export let produkt: Produkt[];
+    export let produkte: Produkt[];
     loadArtikel("produkte.json");
 
     async function loadArtikel(_url: RequestInfo): Promise<void> {
@@ -19,7 +19,7 @@ namespace Aufgabe07 {
         produkte = await JSON.parse(JSON.stringify(jsonArray));
         console.log(produkte);
 
-        get();
-}
+        getProdukte();
 }
 
+}

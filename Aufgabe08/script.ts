@@ -1,21 +1,19 @@
 namespace Aufgabe082 {
 
     let button: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button");
-    button.addEventListener("click", clickButton);
+    button.addEventListener("click", handle);
 
-    async function laden (_url: RequestInfo): Promise<void> {
-        let response: Response = await fetch(_url, { method: "get" });
-        let response2: String = await response.text();
-        console.log(response2);
 
-    }
+    async function handle(): Promise<void> {
 
-    function clickButton(): void {
         let formData: FormData = new FormData(document.forms[0]);
         let url: string = "https://annaalehmanngis.herokuapp.com/";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url = url + "?" + query.toString();
-        
-        laden(url);
+        console.log(url);
+
+        console.log("Benutzername " + formData.get("name"));
+        console.log("Passwort " + formData.get("passwort"));
+
     }
 }

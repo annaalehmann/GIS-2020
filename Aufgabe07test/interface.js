@@ -8,7 +8,7 @@ var Aufgabe07;
         console.log(jsonArray);
         Aufgabe07.produkte = await JSON.parse(JSON.stringify(jsonArray));
         console.log(Aufgabe07.produkte);
-        Aufgabe07.get();
+        Aufgabe07.getProdukte();
     }
 })(Aufgabe07 || (Aufgabe07 = {}));
 //# sourceMappingURL=interface.js.map

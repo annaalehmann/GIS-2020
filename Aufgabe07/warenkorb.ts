@@ -1,23 +1,23 @@
 namespace Aufgabe07 {
 
-    for (let i: number = 0; i < localStorage.length; i++) {
+    for (let i: number = 0; i <= length - 1; i++) {
 
         let div: HTMLDivElement = document.createElement("div");
         document.getElementById("inhaltKorb")?.appendChild(div);
-        div.id = "warenkorb" + i;
+        div.id = "container" + i;
 
         let bild: HTMLImageElement = document.createElement("img");
-        bild.src = "" + localStorage.getItem("bild");
+        bild.src = "" + localStorage.getItem("bild" + i);
         div.appendChild(bild);
 
         let name: HTMLElement = document.createElement("h3");
-        name.innerHTML = "" + localStorage.getItem("namen");
+        name.innerHTML = "" + localStorage.getItem("name" + i);
         div.appendChild(name);
 
         let preis: HTMLElement = document.createElement("h4");
-        preis.innerHTML = "" + localStorage.getItem("preis");
-        div.setAttribute("preis", preis.innerHTML);
+        preis.innerHTML = "" + localStorage.getItem("preis" + i) + "€";
         div.appendChild(preis);
+        div.setAttribute("preis", preis.innerHTML);
 
         let löschen: HTMLButtonElement = document.createElement("button");
         löschen.innerHTML = "löschen";
@@ -25,25 +25,24 @@ namespace Aufgabe07 {
 
         löschen.addEventListener("click", handlelöschen);
         löschen.setAttribute("delete", i + "");
-        div.setAttribute("löschen", i + "");
+        div.setAttribute("lösch", i + "");
+
     }
 
-    let gesamtpreis: HTMLParagraphElement = document.createElement("p");
-    //Button erstellen 
-    let allesLöschen: HTMLButtonElement = document.createElement("button");
-    document.getElementById("löschenButton")?.appendChild(allesLöschen);
-    addEventListener("click", handleAllesLöschen);
+    let allDelete: HTMLButtonElement = (<HTMLButtonElement>document.getElementById("löschenButton"));
+    allDelete.innerHTML = "Alles löschen";
+    allDelete.addEventListener("click", handleAllesLöschen);
+
 
     function handlelöschen(_event: Event): void {
-        let löschen: string = (<HTMLElement>_event.target).getAttribute("delete")!;
-        localStorage.removeItem(löschen);
-        (<HTMLDivElement>document.getElementById("warenkorb" + löschen)).remove();
+        let del: string = (<HTMLElement>_event.target).getAttribute("delete")!;
+        localStorage.removeItem(del);
+        (<HTMLDivElement>document.getElementById("contauiner" + del)).remove();
     }
 
     function handleAllesLöschen(_event: Event): void {
-        for (let i: number = 0; i <= localStorage.length; i++) {
-            (<HTMLDivElement>document.getElementById("warenkorb" + i)).remove();
-            gesamtpreis.innerHTML = "Gesamtpreis: " + 0 + "€";
+        for (let i: number = 0; i <= length; i++) {
+            (<HTMLDivElement>document.getElementById("container" + i)).remove();
             localStorage.clear();
         }
 

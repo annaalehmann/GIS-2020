@@ -217,14 +217,12 @@ img[alt=Warenkorb]{
     display: grid;
     grid-gap: 30px 30px;
     justify-content: center;
-    grid-template-columns: repeat(4, 210px);
     width: 100%;
 }
 
 .inhaltsWarenkorb div{
-    display:block;
+    display: block;
     justify-content:center;
-    grid-template-columns:1fr;
     background-color: rgba(187, 187, 187, 0.9);
     width: 210px;
     height: 100%;
@@ -280,6 +278,7 @@ img[alt=Warenkorb]{
 }
 
 #löschenButton{
+    text-decoration: none; 
     background-color: white; 
     font-size: 15px;
     position: absolute;
