@@ -1,36 +1,40 @@
 namespace Aufgabe09 {
+    
+    
+    let buttonHTML: HTMLButtonElement = <HTMLButtonElement> document.getElementById("buttonHTML");
+    buttonHTML.addEventListener("click", handleButtonHTML);
 
-    let buttonjson: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonJSON");
-    buttonjson?.addEventListener("click", handleButtonJson);
+    let submitBut: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonJSON");
+    submitBut.addEventListener("click", handleButtonJSON);
 
-    let buttonhtml: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonHTML");
-    buttonhtml?.addEventListener("click", handleButtonHtml);
+    let formData: FormData;
 
-    async function handleButtonHtml(): Promise<void> {
-        let formData: FormData = new FormData(document.forms[0]);
-        let url: string = "https://annaalehmanngis.herokuapp.com/";
-        url += "/json";
+    async function handleButtonHTML(): Promise<void> {
+        formData = new FormData(document.forms[0]);
+        let url: string = "https://annaalehmanngis.herokuapp.com";
+        url += "/html";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url += "?" + query.toString();
 
-        let response: Response = await fetch(url);
-        let responseText: string = await response.text();
+        let antwort: Response = await fetch(url);
+        let antwortText: string = await antwort.text();
+        console.log(antwortText);
 
-        let serverResponse: HTMLElement = <HTMLElement> document.getElementById("ausgabeServer");
-        serverResponse.innerHTML = responseText;
+        let serverAntwort: HTMLElement = <HTMLElement> document.getElementById("ausgabeServer");
+        serverAntwort.innerHTML = antwortText;
     }
+    
+    async function handleButtonJSON(): Promise<void> {
 
-    async function handleButtonJson(): Promise<void> {
-
-        let formData: FormData = new FormData(document.forms[0]);
-        let url: string = "https://annaalehmanngis.herokuapp.com/";
-        url += "/html";
+        formData = new FormData(document.forms[0]);
+        let url: string = "https://annaalehmanngis.herokuapp.com";
+        url += "/json";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url = url + "?" + query.toString();
 
-        let response: Response = await fetch(url);
-        let responseText: string = await response.json();        
-        console.log(responseText);
-
+        let antwort: Response = await fetch(url);
+        let antwortText: string = await antwort.json();
+        console.log(antwortText);
+        
     }
 }
