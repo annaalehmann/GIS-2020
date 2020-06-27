@@ -1,7 +1,7 @@
-namespace Aufgabe082 {
-
+namespace Aufgabe08 {
+    
     let button: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button");
-    button.addEventListener("click", handle);
+    button?.addEventListener("click", handle);
 
 
     async function handle(): Promise<void> {

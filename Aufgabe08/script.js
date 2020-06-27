@@ -1,8 +1,8 @@
 "use strict";
-var Aufgabe082;
-(function (Aufgabe082) {
+var Aufgabe08;
+(function (Aufgabe08) {
     let button = document.getElementById("button");
-    button.addEventListener("click", handle);
+    button?.addEventListener("click", handle);
     async function handle() {
         let formData = new FormData(document.forms[0]);
         let url = "https://annaalehmanngis.herokuapp.com/";
@@ -12,5 +12,5 @@ var Aufgabe082;
         console.log("Benutzername " + formData.get("name"));
         console.log("Passwort " + formData.get("passwort"));
     }
-})(Aufgabe082 || (Aufgabe082 = {}));
+})(Aufgabe08 || (Aufgabe08 = {}));
 //# sourceMappingURL=script.js.map

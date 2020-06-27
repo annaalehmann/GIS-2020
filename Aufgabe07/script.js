@@ -1,6 +1,15 @@
 "use strict";
 var Aufgabe07;
 (function (Aufgabe07) {
+    loadArtikel("produkte.json");
+    async function loadArtikel(_url) {
+        let response = await fetch(_url);
+        let jsonArray = await response.json();
+        console.log(jsonArray);
+        Aufgabe07.produkte = await JSON.parse(JSON.stringify(jsonArray));
+        console.log(Aufgabe07.produkte);
+        get();
+    }
     function get() {
         for (let i = 0; i < Aufgabe07.produkt.length; i++) {
             let div = document.createElement("div");
