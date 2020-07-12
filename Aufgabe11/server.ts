@@ -9,9 +9,6 @@ export namespace A09Server {
 
   databaseUrl = "mongodb+srv://annaalehmann:hallo12345@gis2020.pgckc.mongodb.net/gis2020?retryWrites=true&w=majority";
 
-  //mongodb+srv://annaalehmann:hallo12345@gis2020.pgckc.mongodb.net/gis2020?retryWrites=true&w=majority
-
-
   console.log("Starting server");
 
   let port: number = Number(process.env.PORT);
@@ -28,6 +25,7 @@ export namespace A09Server {
   async function connectToDatabase(_url: string): Promise<void> {
     let options: Mongo.MongoClientOptions = {useNewUrlParser: true, useUnifiedTopology: true};
     let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
+    
     await mongoClient.connect();
     mongoDaten = mongoClient.db("Test").collection("Students");
   } 
@@ -36,32 +34,26 @@ export namespace A09Server {
     console.log("Listening");
   }
 
-  function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
+  async function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): Promise<void> {
     console.log("I hear voices!");
 
+   
     _response.setHeader("content-type", "text/html; charset=utf-8");
     _response.setHeader("Access-Control-Allow-Origin", "*");
 
 
     if (_request.url) {
       let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
-      let path: string = <string>url.pathname;
 
-      if (path == "/json") {
-        let jsonString: string = JSON.stringify(url.query);
-        _response.write(jsonString);
+      if (url.pathname == "/hinzugüfen") {
+        
+        mongoDaten.insertOne(url.query);
 
-        console.log(jsonString);
+          } else if (url.pathname == "/anzeigen") {
+            _response.write(JSON.stringify(await mongoDaten.find().toArray()));
+          }
       }
-
-      else if (path == "/html") {
-
-        for (let key in url.query) {
-          _response.write(key + ":" + url.query[key] + "<br/>");
-
-        }
-      }
-    }
+    
     _response.end();
   }
 }

@@ -1,4 +1,4 @@
-namespace Aufgabe11{
+namespace Aufgabe11 {
 
 document.getElementById("datenHinzufügen")?.addEventListener("click", handleHinzufügen);
 document.getElementById("datenAnzeigen")?.addEventListener("click", handleAnzeigen);
@@ -7,7 +7,7 @@ document.getElementById("datenAnzeigen")?.addEventListener("click", handleAnzeig
 async function handleHinzufügen(): Promise<void> {
     let formData: FormData = new FormData(document.forms[0]); 
     let url: string = "https://annaalehmanngis.herokuapp.com";
-    url += "/add";
+    url += "/hinzufügen";
 
     let query: URLSearchParams = new URLSearchParams(<any> formData);
     url = url + "?" + query.toString();
@@ -17,10 +17,10 @@ async function handleHinzufügen(): Promise<void> {
 
 async function handleAnzeigen(): Promise<void> {
     let url: string = "https://annaalehmanngis.herokuapp.com";
-    url += "/show";
+    url += "/anzeigen";
    
-    let antwort: Response = await fetch(url, { method: "get" });
+    let antwort: Response = await fetch(url, {method: "get" });
     let zweiteAntwort: string = await antwort.text(); 
-    (<HTMLElement>document.getElementById("serverAntwort")).innerHTML  = zweiteAntwort;
+    (<HTMLElement>document.getElementById("serverAntwort")).innerHTML = zweiteAntwort;
   }
 }
