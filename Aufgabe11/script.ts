@@ -14,7 +14,7 @@ namespace Aufgabe11 {
 
     let query: URLSearchParams = new URLSearchParams(<any>formData);
     url = url + "?" + query.toString();
-    (<HTMLFormElement>document.getElementById("form"))?.reset();
+  
     await fetch(url);
   }
 
@@ -23,7 +23,8 @@ namespace Aufgabe11 {
     url += "/anzeigen";
 
     let antwort: Response = await fetch(url, { method: "get" });
-    let zweiteAntwort: string = await antwort.text();
-    (<HTMLElement>document.getElementById("serverAntwort")).innerHTML = zweiteAntwort;
+    let text: string = await antwort.text();
+    (<HTMLElement>document.getElementById("serverAntwort")).innerHTML = text;
+
   }
 }
