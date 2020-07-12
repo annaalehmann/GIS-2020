@@ -11,10 +11,8 @@ namespace Aufgabe11 {
     let formData: FormData = new FormData(document.forms[0]);
     let url: string = "https://annaalehmanngis.herokuapp.com";
     let query: URLSearchParams = new URLSearchParams(<any>formData);
-    url += "/hinzufügen" + "?" + query.toString(); ;
+    url += "/hinzufuegen" + "?" + query.toString(); ;
     await fetch(url);
-
- 
   }
 
   async function handleAnzeigen(): Promise<void> {

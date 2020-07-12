@@ -49,7 +49,7 @@ export namespace Aufgabe11 {
       let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
       let pathname: String | null = url.pathname;
 
-      if (pathname == "/hinzufügen") {
+      if (pathname == "/hinzufuegen") {
 
         daten.insertOne(url.query);
 
