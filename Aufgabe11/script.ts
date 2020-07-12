@@ -8,10 +8,11 @@ namespace Aufgabe11 {
 
 
   async function handleHinzufügen(): Promise<void> {
-    let formData: FormData = new FormData(document.forms[0]);
+    let form: FormData = new FormData(document.forms[0]);
+    let query: URLSearchParams = new URLSearchParams(<any>form);
+    
     let url: string = "https://annaalehmanngis.herokuapp.com";
-    let query: URLSearchParams = new URLSearchParams(<any>formData);
-    url += "/hinzufuegen" + "?" + query.toString(); ;
+    url += "/hinzufuegen" + "?" + query.toString();
     await fetch(url);
 
     console.log("test");
@@ -22,8 +23,9 @@ namespace Aufgabe11 {
     url += "/anzeigen";
 
     let antwort: Response = await fetch(url, { method: "get" });
-    let text: string = await antwort.text();
-    (<HTMLElement>document.getElementById("serverAntwort")).innerHTML = text;
+    let ausgabe: string = await antwort.text();
+
+    (<HTMLElement>document.getElementById("serverAntwort")).innerHTML = ausgabe;
 
   }
 }

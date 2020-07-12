@@ -4,14 +4,12 @@ import * as Mongo from "mongodb";
 
 
 export namespace Aufgabe11 {
-  let daten: Mongo.Collection;
+  
   let datenUrl: string;
-
   datenUrl = "mongodb+srv://annaalehmann:hallo12345@gis2020.pgckc.mongodb.net/Test?retryWrites=true&w=majority";
   verbindungDatenbank(datenUrl);
-
-  //mongodb+srv://annaalehmann:hallo12345@gis2020.pgckc.mongodb.net/Test?retryWrites=true&w=majority
-  //https://mongodbnetbrowser.herokuapp.com/?u=annaalehmann&p=hallo12345&a=gis2020.drdqs.mongodb.net&n=Test&c=Students
+ 
+  let daten: Mongo.Collection;
 
   console.log("Starting server");
 
