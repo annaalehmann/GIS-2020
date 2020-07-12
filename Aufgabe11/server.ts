@@ -23,9 +23,9 @@ export namespace A09Server {
   server.addListener("listening", handleListen);
   server.listen(port);
 
-  connectToDatabase(datenUrl);
+  verbindungDatenbank(datenUrl);
 
-  async function connectToDatabase(_url: string): Promise<void> {
+  async function verbindungDatenbank(_url: string): Promise<void> {
     let options: Mongo.MongoClientOptions = {useNewUrlParser: true, useUnifiedTopology: true};
     let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
     
