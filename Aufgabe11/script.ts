@@ -19,8 +19,11 @@ namespace Aufgabe11 {
   }
 
   async function handleAnzeigen(): Promise<void> {
+    let formData: FormData = new FormData(document.forms[0]);
+    let query: URLSearchParams = new URLSearchParams(<any> formData);
+
     let url: string = "https://annaalehmanngis.herokuapp.com";
-    url += "/anzeigen";
+    url += "/anzeigen"  + "?" + query.toString();
 
     let antwort: Response = await fetch(url, { method: "get" });
     let ausgabe: string = await antwort.text();
