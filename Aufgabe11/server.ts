@@ -25,12 +25,13 @@ export namespace A11Server {
   server.listen(port);
 
   async function verbindungDatenbank(_url: string): Promise<void> {
-    let options: Mongo.MongoClientOptions = {useNewUrlParser: true, useUnifiedTopology: true};
+
+    let options: Mongo.MongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
     let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
-    
     await mongoClient.connect();
+
     daten = mongoClient.db("Test").collection("Students");
-  } 
+  }
 
   function handleListen(): void {
     console.log("Listening");
@@ -39,23 +40,24 @@ export namespace A11Server {
   async function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): Promise<void> {
     console.log("I hear voices!");
 
-   
+
     _response.setHeader("content-type", "text/html; charset=utf-8");
     _response.setHeader("Access-Control-Allow-Origin", "*");
 
 
     if (_request.url) {
       let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
+      let pathname: String | null = url.pathname;
 
-      if (url.pathname == "/hinzugüfen") {
-        
+      if (pathname == "/hinzufügen") {
+
         daten.insertOne(url.query);
 
-          } else if (url.pathname == "/anzeigen") {
-            _response.write(JSON.stringify(await daten.find().toArray()));
-          }
+      } else if (pathname == "/anzeigen") {
+        _response.write(JSON.stringify(await daten.find().toArray()));
       }
-    
+    }
+
     _response.end();
   }
 }
