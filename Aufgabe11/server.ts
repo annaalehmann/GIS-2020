@@ -3,7 +3,7 @@ import * as Url from "url";
 import * as Mongo from "mongodb";
 
 
-export namespace A09Server {
+export namespace A11Server {
   let daten: Mongo.Collection;
   let datenUrl: string;
 
