@@ -13,6 +13,8 @@ namespace Aufgabe11 {
     let query: URLSearchParams = new URLSearchParams(<any>formData);
     url += "/hinzufuegen" + "?" + query.toString(); ;
     await fetch(url);
+
+    console.log("test");
   }
 
   async function handleAnzeigen(): Promise<void> {
