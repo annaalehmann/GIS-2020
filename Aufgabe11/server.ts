@@ -4,10 +4,13 @@ import * as Mongo from "mongodb";
 
 
 export namespace A09Server {
-  let mongoDaten: Mongo.Collection;
-  let databaseUrl: string;
+  let daten: Mongo.Collection;
+  let datenUrl: string;
 
-  databaseUrl = "mongodb+srv://annaalehmann:hallo12345@gis2020.pgckc.mongodb.net/gis2020?retryWrites=true&w=majority";
+  datenUrl = "mongodb+srv://annaalehmann:hallo12345@gis2020.pgckc.mongodb.net/Test?retryWrites=true&w=majority";
+
+  //mongodb+srv://annaalehmann:hallo12345@gis2020.pgckc.mongodb.net/Test?retryWrites=true&w=majority
+  //https://mongodbnetbrowser.herokuapp.com/?u=annaalehmann&p=hallo12345&a=gis2020.drdqs.mongodb.net&n=Test&c=Students
 
   console.log("Starting server");
 
@@ -20,14 +23,14 @@ export namespace A09Server {
   server.addListener("listening", handleListen);
   server.listen(port);
 
-  connectToDatabase(databaseUrl);
+  connectToDatabase(datenUrl);
 
   async function connectToDatabase(_url: string): Promise<void> {
     let options: Mongo.MongoClientOptions = {useNewUrlParser: true, useUnifiedTopology: true};
     let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
     
     await mongoClient.connect();
-    mongoDaten = mongoClient.db("Test").collection("Students");
+    daten = mongoClient.db("Test").collection("Students");
   } 
 
   function handleListen(): void {
@@ -47,10 +50,10 @@ export namespace A09Server {
 
       if (url.pathname == "/hinzugüfen") {
         
-        mongoDaten.insertOne(url.query);
+        daten.insertOne(url.query);
 
           } else if (url.pathname == "/anzeigen") {
-            _response.write(JSON.stringify(await mongoDaten.find().toArray()));
+            _response.write(JSON.stringify(await daten.find().toArray()));
           }
       }
     
