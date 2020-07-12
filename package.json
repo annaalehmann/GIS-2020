@@ -9,8 +9,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node Aufgabe09/server.js"
+    "start": "node Aufgabe11/server.js"
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/annaalehmann/GIS-2020.git"
