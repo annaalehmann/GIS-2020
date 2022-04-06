@@ -1,0 +1,94 @@
+<script type="text/javascript">
+function jumpToSecond(second) {
+   var ctaId=window.frameElement.id.split('_')[1];
+   var playerId=window.frameElement.src.split('/');
+   playerId=playerId[playerId.length-3];
+   var playerData= {
+     uuid: playerId,
+     event: 'seek',
+     position: second
+   };
+   window.parent.postMessage(JSON.stringify(playerData), '*');}
+</script>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif; /*Schriftart ändern*/
+}
+
+  i{
+  margin-left: 7px
+  }
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 14px; /*Schriftgröße Agenda-Container*/
+  border: none;
+  outline: none;
+  color: white; /*Schriftfarbe Agenda-Container*/
+  padding: 9px;
+  background-color: rgb(0, 0, 0, 0.7); /*Hintergrundfarbe Agenda-Container*/
+  font-family: inherit;
+  margin: 0;
+  width: 90px; /*Breite Agenda-Container*/
+}
+
+.dropdown:hover .dropbtn {
+   background-color: #5eb58c; /*Hintergrundfarbe nach dem Hovern - Agenda-Contaienr*/
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px; /*Breite der Drop-Down Felder*/
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white; /*Schriftfarbe Drop-Down*/
+  font-size: 12px; /*Schriftgröße Drop-Down*/
+  padding: 8px 8px;
+  background-color: rgb(20, 0, 0, 0.7); /*Hintergrundfarbe Drop-Down Felder*/
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #5eb58c; /*Hintergrundfarbe nach dem Hovern - Agenda*/
+  cursor:pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<div class="navbar">
+<div class="dropdown">
+<button class="dropbtn">Agenda <i class="fa fa-caret-down"></i></button> <!-- Name des immer sichtbaren Containers kann hier geändert werden-->
+<div class="dropdown-content">
+<!--In die Klammern von jumpToSecond wird der Zeitpunkt in Sekunden eingetragen, um auf der Zeitleisten zu springen, -->
+<a onclick="jumpToSecond(0)">Thema 1</a> <!-- Name des Themas kann hier geändert werden -->
+<a onclick="jumpToSecond(0)">Thema 2 </a>
+<a onclick="jumpToSecond(0)">Thema 3</a>
+<a onclick="jumpToSecond(0)">Thema 4</a>
+</div>
+</div>
+</div>
+</body>
+</html>
